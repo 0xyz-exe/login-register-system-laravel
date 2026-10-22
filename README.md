@@ -1,58 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Login & Register System - Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Complete authentication system demonstration using Laravel Breeze with enhanced dashboard and user management.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- ✅ User Registration with validation
+- ✅ Secure Login with session management
+- ✅ Password Reset via email
+- ✅ Email Verification (optional)
+- ✅ Profile Management (update info, change password)
+- ✅ Account Deletion
+- ✅ Protected Routes with middleware
+- ✅ Rate Limiting on auth endpoints
+- ✅ Enhanced Dashboard with user statistics
+- ✅ CSRF Protection
+- ✅ Password Hashing (bcrypt)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Laravel 13.38.0
+- Laravel Breeze 2.4
+- PHP 8.5.0
+- SQLite
+- Tailwind CSS
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Installation
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/0xyz-exe/login-register-system-laravel.git
+cd login-register-system-laravel
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate --seed
+npm run build
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## Demo Account
 
-## Contributing
+- Email: demo@example.com
+- Password: password
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Features Detail
 
-## Code of Conduct
+### Registration
+- Name, email, password fields
+- Password confirmation
+- Email uniqueness validation
+- Automatic login after registration
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Login
+- Email and password authentication
+- "Remember me" option
+- Session regeneration for security
+- Rate limiting (5 attempts per minute)
 
-## Security Vulnerabilities
+### Password Reset
+- Email-based recovery
+- Secure token generation
+- Password confirmation
+- Token expiration
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Profile Management
+- Update name and email
+- Change password
+- Delete account with confirmation
+- Profile data validation
 
-## License
+### Dashboard
+- User statistics
+- Account age
+- Total registered users
+- Recent user list
+- Feature overview
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Security
+
+- CSRF tokens on all forms
+- Password hashing with bcrypt
+- Session regeneration on login
+- Rate limiting on authentication
+- SQL injection prevention
+- XSS protection via Blade
+
+## Database Schema
+
+**users table:**
+- id, name, email, email_verified_at
+- phone, bio, avatar (profile fields)
+- last_login_at
+- password, remember_token
+- created_at, updated_at
+
+## Routes
+
+- `/register` - Registration form
+- `/login` - Login form
+- `/forgot-password` - Password reset request
+- `/reset-password` - Password reset form
+- `/dashboard` - User dashboard (auth required)
+- `/profile` - Profile management (auth required)
+
+## Testing
+
+```bash
+php artisan test
+```
+
+## Repository
+
+https://github.com/0xyz-exe/login-register-system-laravel
