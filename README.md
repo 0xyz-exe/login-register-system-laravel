@@ -2,6 +2,22 @@
 
 Complete authentication system demonstration using Laravel Breeze with enhanced dashboard and user management.
 
+Repository: https://github.com/0xyz-exe/login-register-system-laravel
+
+## Screenshots
+
+### User Authentication Dashboard
+![User dashboard](docs/screenshots/01_dashboard.png)
+
+### User Registration
+![Registration](docs/screenshots/02_register.png)
+
+### Sign In Interface
+![Login](docs/screenshots/03_login.png)
+
+### Profile Management & Security
+![Profile](docs/screenshots/04_profile.png)
+
 ## Features
 
 - ✅ User Registration with validation
