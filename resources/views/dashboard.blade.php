@@ -8,7 +8,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <div class="text-gray-600 text-sm mb-2">Account Age</div>
-                    <div class="text-3xl font-bold text-indigo-600">{{ $stats['account_age_days'] }}</div>
+                    <div class="text-3xl font-bold text-indigo-600">{{ (int) $stats['account_age_days'] }}</div>
                     <div class="text-gray-500 text-xs">days</div>
                 </div>
                 

@@ -6,17 +6,12 @@ Repository: https://github.com/0xyz-exe/login-register-system-laravel
 
 ## Screenshots
 
-### User Authentication Dashboard
-![User dashboard](docs/screenshots/01_dashboard.png)
-
-### User Registration
-![Registration](docs/screenshots/02_register.png)
-
-### Sign In Interface
-![Login](docs/screenshots/03_login.png)
-
-### Profile Management & Security
-![Profile](docs/screenshots/04_profile.png)
+| Tampilan | Preview |
+|---|---|
+| **Dasbor Autentikasi & Metrik Akun**<br>Panel kontrol pengguna terautentikasi dengan metrik usia akun, total pengguna terdaftar, sesi aktif, dan daftar periksa fitur keamanan | ![Dasbor Autentikasi & Metrik Akun](docs/screenshots/01-auth-dashboard-overview.png) |
+| **Portal Masuk Pengguna (Sign In)**<br>Antarmuka login aman dengan validasi email, kata sandi, opsi remember me, pemulihan kata sandi, dan proteksi rate limiting | ![Portal Masuk Pengguna](docs/screenshots/02-login-authentication-portal.png) |
+| **Portal Pendaftaran Akun Baru (Register)**<br>Formulir pendaftaran pengguna baru dengan verifikasi keunikan email, konfirmasi kata sandi, dan enkripsi hashing otomatis | ![Portal Pendaftaran Akun Baru](docs/screenshots/03-registration-intake-portal.png) |
+| **Pengaturan Profil & Keamanan Akun**<br>Pusat pengelolaan informasi profil pengguna, pembaruan kata sandi berkala, dan penghapusan akun mandiri secara permanen | ![Pengaturan Profil & Keamanan Akun](docs/screenshots/04-profile-account-security.png) |
 
 ## Features
 
